@@ -1,0 +1,35 @@
+<ion-content padding no-bounce center text-center style="background-color: #2E153F">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <br><br>
+                <img src="../../assets/imgs/Lotto-Logo.png" width="60%">
+               <br><br>
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-center style="margin-top: -5%">
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                <ion-item class="item-user">
+                    <ion-label>
+                        <ion-icon name="md-contact" color="lightgray"></ion-icon>
+                    </ion-label>
+                    <ion-input clearInput type="text" placeholder="Username" [(ngModel)]="name"></ion-input>
+                </ion-item>
+                <ion-item class="item-pass">
+                    <ion-label>
+                        <ion-icon name="ios-key" color="lightgray"></ion-icon>
+                    </ion-label>
+                    <ion-input clearInput type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                </ion-item>
+                <div>
+                <button ion-button block round style="background-color: #029647" (click)="nextHome()">Login</button>
+            </div>
+            <div>
+                <ion-label (click)="register()" color="light">Register Now.</ion-label>
+            </div>
+                <button ion-button block clear color="light" (click)="money()">เติมเงิน</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    
+</ion-content>

@@ -1,0 +1,7 @@
+<ion-tabs [selectedIndex]="num" color="light">
+  <ion-tab [root]="tab1Root" tabIcon="md-home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Coin {{user.coin | number : fractionSize}}">
+  </ion-tab>
+  <ion-tab [root]="tab3Root" tabIcon="md-globe" [tabBadge]="alarmCount" tabBadgeStyle="mana"></ion-tab>
+</ion-tabs>
+<!-- -->

@@ -1,0 +1,50 @@
+page-ticket {
+    .a {
+        background-color: lightgray;
+        height: 100px;
+        font-size: 18px;
+        border-radius: 20px
+    }
+    .b {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    .red{
+        color: red;
+    }
+    .green{
+        color: green;
+    }
+    .font-textx{
+        left: 17%;
+        margin-top: 8px;
+        margin-left: 0px;
+        font-size: 16px;
+        font-style: initial;
+        font-weight:bold;   
+    }
+    .font-textx2{
+        left: 17%;
+        margin-top: 8px;
+        margin-left: 0px;
+        font-size: 22px;
+        font-style: initial;
+        font-weight:bold;   
+    }
+    .img-bottom-left {
+        position: absolute;
+        width: 10%;
+        height: 15%;
+        left: 7%;
+       
+    }
+    .img-bottom {
+        position: absolute;
+        width: 20%;
+        height: 25%;
+        right: 7%;
+        bottom: 7%;
+        color: antiquewhite;
+        font-size: 16px;
+    }
+}

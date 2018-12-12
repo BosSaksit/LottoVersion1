@@ -1,0 +1,46 @@
+page-home {
+    .font-textx{
+        left: 17%;
+        margin-top: 8px;
+        margin-left: 18px;
+        font-size: 20px;
+        font-style: initial;
+        font-weight:bold;   
+    }
+    .img-top {
+        position: absolute;
+        width: 10%;
+        height: 30%;
+        right: 0px;
+        margin-top: 10px;
+        margin-right: 8px;
+    }
+    .img-bottom {
+        position: absolute;
+        width: 20%;
+        height: 25%;
+        right: 7%;
+        bottom: 3%;
+        font-size: 50%;
+        background-color: #0CB852;
+    }
+    .img-bottom-left {
+        position: absolute;
+        width: 10%;
+        height: 15%;
+        left: 7%;
+        bottom: 7%;
+    }
+    .img-bottom-left-label {
+        position: absolute;
+        width: 10%;
+        height: 15%;
+        left: 17%;
+        bottom: 7%;
+        color:white;
+        
+    }
+    .scroll-content {
+        overflow-y: hidden;
+    }
+}

@@ -1,0 +1,93 @@
+<!--
+  Generated template for the PocketMoneyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="vio">
+    <ion-title>Pocket Money</ion-title>
+    <ion-buttons letf>
+      <button ion-button icon-only color="mana" (cilck)="toggleMenu()">
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content no-padding>
+  <ion-grid style="background-color: rgb(230, 230, 230)">
+    <ion-row>
+      <ion-col text-center style="border-right: rgb(185, 185, 185) solid 2px">
+        <ion-img style="width: 40px; height: 40px; background-color: rgb(230, 230, 230);" src="../../assets/imgs/coin bath.png"></ion-img>
+        <ion-row>
+          <ion-col>
+            <div style="text-align: left" class="b">THB {{user.money | number : fractionSize}}</div>
+          </ion-col>
+          <ion-col>
+            <ion-buttons right><button ion-button round color="secondary" small (click)="alertMoney()">BUY</button></ion-buttons>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col text-center>
+        <ion-img style="width: 40px; height: 40px; background-color: rgb(230, 230, 230);" src="../../assets/imgs/coin bit.png"></ion-img>
+      
+          <ion-row>
+              <ion-col>
+                <div style="text-align: left" class="b">COIN {{user.coin | number : fractionSize}}</div>
+              </ion-col>
+              <ion-col>
+                <ion-buttons right><button ion-button round color="secondary" small (click)="buyMoney()">BUY</button></ion-buttons>
+              </ion-col>
+            </ion-row>
+       <!--  <div style="text-align: left" class="b">COIN {{user.coin | number : fractionSize}} <ion-buttons right>
+          <button ion-button round small color="secondary" (click)="buycoin()"> BUY </button></ion-buttons>  
+        </div>-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <br>
+  <div text-center>
+    <button ion-button round small color="grey">
+      <p style="color: black">
+        More history <ion-icon style="margin-left: 10px" style="color: black " name="md-arrow-dropright"></ion-icon>
+      </p>
+    </button></div><br>
+ 
+    <div>
+      <ion-row style="margin-top: -10px;font-weight: bold">
+        <ion-col style="text-align: left; margin-left: 15px">
+          <label class="c1">Date</label>
+        </ion-col>
+        <ion-col style="text-align: center">
+          <label class="c1">Amount</label>
+        </ion-col>
+        <ion-col style="text-align: right; margin-right: 20px">
+          <label class="c1">Type</label>
+        </ion-col>
+      </ion-row>
+    </div>
+  
+ 
+    <div ion-item *ngFor="let h of history">
+      <ion-row>
+        <ion-col style="text-align: left">
+          <h4>{{ h.date }}</h4>
+        </ion-col>
+        <ion-col style="text-align: right">
+          <h4>{{ h.amouth }}</h4>
+        </ion-col>
+        <ion-col style="text-align: left;margin-top: -5px;margin-left: 10px">
+          <img [src]="h.img" width="25px">
+        </ion-col>
+        <ion-col style="text-align: right">
+          <h4> {{ h.detailGame }}</h4>
+        </ion-col>
+      </ion-row>
+    </div>
+  
+
+
+
+
+</ion-content>

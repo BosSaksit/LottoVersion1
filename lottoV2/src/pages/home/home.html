@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar color="vio">
+        <ion-title>HOME</ion-title>
+        <ion-buttons letf>
+            <button ion-button icon-only color="mana" (cilck)="toggleMenu()">
+                <ion-icon name="md-menu"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+    <ion-grid no-padding>
+        <ion-row>
+            <ion-col col-12>  
+                <img width="100%" src="../../assets/imgs/Asset 1.png">
+                <img width="90%" style="margin-top: -250px" src="../../assets/imgs/Lotto-Banner.png">
+            </ion-col>
+                <label class="font-textx">Play Game</label>
+            <ion-col col-12 style="margin-top:8px">              
+                <button (click)="nextTicketsl(sl)" round class="img-bottom" ion-button><div style="font-size: 10px">Buy Ticket</div></button>
+                <label class="img-bottom-left-label" width="100%">{{countsl | number : fractionSize}}</label>
+                <img class="img-bottom-left" width="100%" src="../../assets/imgs/Asset 2@4x.png">
+                <img width="90%" src="../../assets/imgs/ScratchPoker_Banner.png" (click)="nextGame()">
+                
+            </ion-col>
+            <ion-col col-12 style="margin-top:5px">
+                <button (click)="nextTicketfs(fs)" round class="img-bottom" ion-button><div style="font-size: 10px">Buy Ticket</div></button>
+                <label class="img-bottom-left-label">{{countfs | number : fractionSize}}</label>
+                <img class="img-bottom-left" width="100%" src="../../assets/imgs/Asset 2@4x.png">
+                <img width="90%" src="../../assets/imgs/Asset 1.png" (click)="nextFruity()">                
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>
