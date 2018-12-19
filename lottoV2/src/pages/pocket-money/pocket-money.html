@@ -26,7 +26,7 @@
             <div style="text-align: left" class="b">THB {{user.money | number : fractionSize}}</div>
           </ion-col>
           <ion-col>
-            <ion-buttons right><button ion-button round color="secondary" small (click)="alertMoney()">BUY</button></ion-buttons>
+            <ion-buttons right><button ion-button round color="secondary" small (click)="alertMoney()">Buy</button></ion-buttons>
           </ion-col>
         </ion-row>
       </ion-col>
@@ -38,7 +38,7 @@
                 <div style="text-align: left" class="b">COIN {{user.coin | number : fractionSize}}</div>
               </ion-col>
               <ion-col>
-                <ion-buttons right><button ion-button round color="secondary" small (click)="buyMoney()">BUY</button></ion-buttons>
+                <ion-buttons right><button ion-button round color="secondary" small (click)="buycoin()">Buy</button></ion-buttons>
               </ion-col>
             </ion-row>
        <!--  <div style="text-align: left" class="b">COIN {{user.coin | number : fractionSize}} <ion-buttons right>
@@ -79,7 +79,7 @@
         <ion-col style="text-align: right">
           <h4>{{ h.amouth }}</h4>
         </ion-col>
-        <ion-col style="text-align: left;margin-top: -5px;margin-left: 10px">
+        <ion-col style="text-align: left;margin-top: -5px;margin-left: 15px">
           <img [src]="h.img" width="25px">
         </ion-col>
         <ion-col style="text-align: right">
@@ -87,9 +87,5 @@
         </ion-col>
       </ion-row>
     </div>
-  
-
-
-
 
 </ion-content>

@@ -22,12 +22,12 @@
   <!--<ion-list  style="background-color: transparent">-->
 
   <ion-card ion-item *ngFor="let h of history" (click)="nextHistory(h.game)" style="background-color: transparent"
-    style="margin-bottom: 10px;border-radius: 5px;" color="grey">
+    style="margin-bottom: 10px;border-radius: 5px;height: 35px" color="grey">
     <ion-grid>
       <ion-row>
         <ion-col col-3>
           <div no-padding item-start>
-            <img [src]="h.img" width="20px" style="margin-top: 10px">
+            <img [src]="h.img" width="15px" style="margin-top: 15px">
           </div>
         </ion-col>
         <ion-col col-5>

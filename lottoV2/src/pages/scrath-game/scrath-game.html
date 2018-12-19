@@ -6,39 +6,40 @@
 -->
 <ion-header>
 
-    <ion-navbar text-center color="mana">
+    <ion-navbar text-center color="vio">
         <ion-title>SCRATH POKER</ion-title>
+        <ion-buttons right>
+            <button ion-button color="danger" (click)="HowtoScrath()">?</button>
+        </ion-buttons>
     </ion-navbar>
 </ion-header>
 <ion-content>
     <ion-grid no-padding>
         <ion-row>
             <ion-col col-12>
-                <img src="../../assets/imgs/g1.png" width="100%">
-                <img src="../../assets/imgs/Ticket.png" style="position: absolute;left: 2%;bottom: 10%;width: 10%;">
-                <label style="position: absolute;bottom: 12%;left: 14%; color: white;font-size: 10% ">{{count | number : fractionSize}}</label>
+                <img src="../../assets/imgs/ScratchPoker_Banner.png" width="100%">
+                <img src="../../assets/imgs/Asset 2@4x.png" style="position: absolute;left: 2%;bottom: 10%;width: 10%;">
+                <label width="100%" style="position: absolute;bottom: 12%;left: 14%; color: white;">{{count | number
+                    : fractionSize}}</label>
             </ion-col>
         </ion-row>
     </ion-grid>
     <ion-grid style="padding: 10px">
         <ion-row>
-            <ion-col col-4>
-                <ion-label>Your Ticket</ion-label>
+            <ion-col>
+                <button (click)="nextTicket(sl)" ion-button round style="background-color: #0CB852;width: 100%">+
+                    Add Ticket</button>
             </ion-col>
-            <ion-col col-4>
-            </ion-col>
-            <ion-col col-4>
-                <button ion-button color="secondary" small (click)="HowtoScrath()">Howtoplay</button>
-            </ion-col>
-        </ion-row> 
-        <button (click)="nextTicket(sl)" ion-button style="background-color: green;border-radius: 10px;width: 100%">+
-            Add Ticket</button>
-        <ion-card style="background-color: green;border-radius: 10px" *ngFor="let t of ticket">
+        </ion-row>
+        <ion-label class="font-textx">Your Ticket</ion-label>
+        <ion-card style="background-color: #029647;border-radius: 5px; height: 90px;" *ngFor="let t of ticket">
             <ion-row style="padding:3px" (click)="NextGame(t.id)">
-                <ion-col col-3>
-                    <ion-label style="color: white">No. {{t.no}}</ion-label>
+                <ion-col col-4> 
+                     <img src="../../assets/imgs/Asset 3@4x.png" style="width: 30px;">                  
+                    <ion-label style="color: white;margin-top: -15px;margin-left: 38px">No. {{t.no}} </ion-label>
+                        
                 </ion-col>
-                <ion-col col-9 style="text-align: right;">
+                <ion-col col-8 style="text-align: right;">
                     <ion-label style="color: white">{{t.date}}</ion-label>
                 </ion-col>
                 <ion-col col-12>
@@ -47,12 +48,12 @@
             </ion-row>
 
         </ion-card>
-        <ion-card style="background-color: gray;border-radius: 10px" *ngFor="let t of ticket2">
+        <ion-card style="background-color: gray;border-radius: 5px;height: 90px;" *ngFor="let t of ticket2">
             <ion-row style="padding:3px" (click)="goToResult(t.id)">
-                <ion-col col-3>
-                    <ion-label style="color: white">No. {{t.no}}</ion-label>
+                <ion-col col-4> <img src="../../assets/imgs/Asset 3@4x.png" style="width: 30px;">                  
+                    <ion-label style="color: white;margin-top: -15px;margin-left: 38px">No. {{t.no}}</ion-label>
                 </ion-col>
-                <ion-col col-9 style="text-align: right;">
+                <ion-col col-8 style="text-align: right;">
                     <ion-label style="color: white">{{t.date}}</ion-label>
                 </ion-col>
                 <ion-col col-12>
