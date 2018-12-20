@@ -6,20 +6,22 @@
 -->
 <ion-header>
 
-  <ion-navbar color="mana">
-    <ion-title>BUY COIN</ion-title>
+  <ion-navbar color="vio" text-center>
+    <ion-title>Buy Coin</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding (ionChance)="ionViewDidLoad()">
-    <ion-card text-center class="a">
-        <ion-grid>
+<ion-content no-padding (ionChance)="ionViewDidLoad()">
+   
+        <ion-grid style="background-color: rgb(230, 230, 230)">
             <ion-row>
-                <ion-col>
-                    <ion-img style="width: 35px; height: 35px; background-color: lightgrey;" src="../../assets/imgs/Coin_BHT.png"></ion-img>
-                    <div class="b">{{user.money | number : fractionSize}}</div>
+                <ion-col text-center>
+                    <ion-img  style="width: 50px; height: 50px; background-color: rgb(230, 230, 230);" src="../../assets/imgs/Coin_BHT.png"></ion-img>                   
+                </ion-col>
+                <ion-col text-center>
+                    <div class="b">BHT  {{user.money | number : fractionSize}}</div>
                 </ion-col>
                 <!-- <ion-col>
                     <ion-img style="width: 35px; height: 35px; background-color: lightgrey;" src="../../assets/imgs/Coin_ETH.png"></ion-img>
@@ -27,41 +29,51 @@
                   </ion-col> -->
             </ion-row>
         </ion-grid>
-    </ion-card>
+    
     <br>
-    <ion-grid>
+    <ion-grid no-padding>
         <ion-row>
-            <ion-col col-12>
-                <ion-item>
-                    <ion-label></ion-label>
-                    <!-- <ion-select [(ngModel)]="ticket.game">
-                        <ion-option [value]="ansgame">{{gamedetail}}</ion-option>
+            <ion-col>
+                <ion-card style="background-color: #029647;height: 130px;" no-padding>
+                    <ion-col col-4>
+                        <img style="margin-left: 15px;width: 20px;height: 0px;" src="../../assets/imgs/Coin.png">
+                    </ion-col>
+                    <ion-col col-8>
+                        <label style="color: aliceblue;margin-left: 200px;margin-top: -10px">* 1 Coin = 10 Money</label>
+                    </ion-col>
+                    <ion-row>
+                        <ion-input style="margin-left: 10px;margin-bottom: 15px;margin-right: 10px ;background-color: rgb(253, 253, 253);"
+                        type="number" placeholder="Your Coin" [(ngModel)]="coinCount" (ionChange)="checkMoney()"></ion-input>
 
-                    </ion-select> -->
-                </ion-item>
-            </ion-col>
-            <ion-col col-12 text-center>
-                <ion-item>
-                    <ion-label stacked color="primary">Your Coin : </ion-label>
-                    <ion-input type="number" placeholder="Your Coin" [(ngModel)]="coinCount" (ionChange)="checkMoney()" ></ion-input>
-                </ion-item>
-            </ion-col>
-            <ion-col col-12 text-center>
-                <br>
-                <ion-label [class]="color" style="font-size: 30px">Use Money : {{chanceMoney | number : fractionSize}}</ion-label>
+                    </ion-row>
+                    <div text-center>
+                        <ion-label color="gold" style="font-size: 16px;margin-top: -5px">Use Money : {{chanceMoney | number : fractionSize}}</ion-label>
+                    </div>
+                </ion-card>
             </ion-col>
         </ion-row>
     </ion-grid>
-    <ion-label style="font-size: 20px;text-align: center;margin-top: 20px" >* 1 Coin = 10 Money</ion-label>
+    
+            <!--<ion-col col-12>
+                <ion-item>
+                    <ion-label></ion-label>
+                     <ion-select [(ngModel)]="ticket.game">
+                        <ion-option [value]="ansgame">{{gamedetail}}</ion-option>
+
+                    </ion-select> 
+                </ion-item>
+            </ion-col>-->
+           
+  
 </ion-content>
 <ion-footer>
     <ion-grid no-padding>
         <ion-row>
             <ion-col col-6 text-center>
-                <button ion-button block color="mana" (click)="nextPop()">Back</button>
+                <button ion-button full color="lightgray" (click)="nextPop()">Back</button>
             </ion-col>
             <ion-col col-6 text-center>
-                <button ion-button block color="secondary" (click)="buyCoin()">Confirm</button>
+                <button ion-button full color="green" (click)="buyCoin()">Confirm</button>
             </ion-col>
         </ion-row>
     </ion-grid>
