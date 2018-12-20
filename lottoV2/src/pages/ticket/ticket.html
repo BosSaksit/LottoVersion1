@@ -15,10 +15,11 @@
 
 <ion-content no-padding>
 
-    <ion-grid style="background-color: rgb(230, 230, 230)">
+    <ion-grid >
+        <ion-card style="background-color: rgb(230, 230, 230);border-radius: 5px">
         <ion-row>
             <ion-col text-center>
-                <ion-img style="width: 50px; height: 50px; background-color: rgb(230, 230, 230);" src="../../assets/imgs/coin bit.png"></ion-img>
+                <ion-img style="width: 50px; height: 50px; background-color: rgb(230, 230, 230);" src="../../assets/imgs/Coin.png"></ion-img>
             </ion-col>
             <ion-col text-center>
                 <div class="b">COIN {{user.coin | number : fractionSize}}</div>
@@ -28,6 +29,7 @@
                     <div class="b">{{user.eth}}</div>
                 </ion-col> -->
         </ion-row>
+    </ion-card>
     </ion-grid>
 
     <br>
@@ -59,7 +61,7 @@
                         <label style="color: aliceblue;margin-left: 215px;margin-top: -20px">* 1 Ticket = 1 Coin</label>
                     </ion-col>
                     <ion-row>
-                        <ion-input style="margin-left: 10px;margin-bottom: 20px;margin-right: 10px ;background-color: rgb(253, 253, 253);"
+                        <ion-input style="margin-left: 10px;margin-bottom: 20px;margin-right: 10px ;background-color: rgb(253, 253, 253);padding-left: 15px"
                             type="number" placeholder="Buy Amount :" [(ngModel)]="ticketCount" (ionChange)="checkTicket()"></ion-input>
 
                     </ion-row>
